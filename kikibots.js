@@ -6,7 +6,7 @@ const https = require('https');
 const { setTimeout } = require('timers/promises');
 
 const ADMIN_ID = 7308292609;
-const BOT_TOKEN = "8707027344:AAFcNwbwG8QdbLi-8Yg-sZLts6woF-KmdgA";
+const BOT_TOKEN = "8533662019:AAHKsMxXgYH9NmJOwCAwfK-TGsAqi0m-TiM";
 const IGNORE_SSL = true;
 const WIN_LOSE_CHECK_INTERVAL = 1000;
 const MAX_RESULT_WAIT_TIME = 60000;
