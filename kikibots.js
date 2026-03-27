@@ -76,7 +76,8 @@ const userTimeStarts = {};
 // Channel Configuration
 const CHANNEL_CONFIG_FILE = 'channel_config.json';
 let requiredChannels = [
-  { id: "@KMM_MOD1", name: "🚀 𝐌'_𝐌𝐎𝐃 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🚀" }
+  { id: "@KMM_MOD1", name: "🚀 𝐌'_𝐌𝐎𝐃 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🚀" },
+  { id: "@Sketchware_Beginner_Developer", name: "777 Bigwin 30စက္ကန့်" }
 ];
 
 // Load system mode
