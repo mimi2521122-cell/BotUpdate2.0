@@ -881,9 +881,9 @@ const updateProfitMessage = async (userId, chatId, currentBalance, currentProfit
       const updateMessage = `
 📊 𝑳𝑰𝑽𝑬 𝑷𝑹𝑶𝑭𝑰𝑻 𝑼𝑷𝑫𝑨𝑻𝑬
 ════════════════════════
-🎮 𝑷𝒍𝒂𝒕𝒇𝒐𝒓𝒎: ${config.GAME_NAME}
-🎯 𝑮𝒂𝒎𝒆: ${gameType}
-🧩 𝑪𝒖𝒓𝒓𝒆𝒏𝒕 𝑩𝒂𝒍𝒂𝒏𝒄𝒆: ${(currentBalance ).toFixed(2)} Ks
+🎮 ဂိမ်းအမျိုးအစား: ${config.GAME_NAME}
+🎯 ဂိမ်း: ${gameType}
+🧩 လက်ကျန်ငွေ ပမာဏ: ${(currentBalance ).toFixed(2)} Ks
 📈 𝑪𝒖𝒓𝒓𝒆𝒏𝒕 𝑷𝒓𝒐𝒇𝒊𝒕: ${currentProfit >= 0 ? '+' : ''}${currentProfit.toFixed(2)} Ks
 ════════════════════════
 🔄 𝑼𝒑𝒅𝒂𝒕𝒆𝒅: ${new Date().toLocaleTimeString()}
@@ -906,9 +906,9 @@ const updateProfitMessage = async (userId, chatId, currentBalance, currentProfit
       const initialMessage = `
 📊 𝑳𝑰𝑽𝑬 𝑷𝑹𝑶𝑭𝑰𝑻 𝑼𝑷𝑫𝑨𝑻𝑬
 ════════════════════════
-🎮 𝑷𝒍𝒂𝒕𝒇𝒐𝒓𝒎: ${config.GAME_NAME}
-🎯 𝑮𝒂𝒎𝒆: ${gameType}
-🧩 𝑪𝒖𝒓𝒓𝒆𝒏𝒕 𝑩𝒂𝒍𝒂𝒏𝒄𝒆: ${(currentBalance ).toFixed(2)} Ks
+🎮 ဂိမ်းအမျိုးအစား: ${config.GAME_NAME}
+🎯 ဂိမ်း: ${gameType}
+🧩 လက်ကျန်ငွေ ပမာဏ: ${(currentBalance ).toFixed(2)} Ks
 📈 𝑪𝒖𝒓𝒓𝒆𝒏𝒕 𝑷𝒓𝒐𝒇𝒊𝒕: ${currentProfit >= 0 ? '+' : ''}${currentProfit.toFixed(2)} Ks
 ════════════════════════
 🔄 𝑼𝒑𝒅𝒂𝒕𝒆𝒅: ${new Date().toLocaleTimeString()}
@@ -1302,7 +1302,7 @@ const formatLoginSuccess = (config, userInfo, balance) => {
 };
 
 const formatBetMessage = (config, gameType, currentIssue, ch, amount, skipBetting) => {
-  return `🎮 ${config.GAME_NAME}\n🎯 𝑩𝒆𝒕: ${ch === 'B' ? '𝑩𝒊𝒈' : '𝑺𝒎𝒂𝒍𝒍'} ${skipBetting ? 0 : (amount ).toFixed(2)} Ks\n🧭 ${gameType}: ${currentIssue}`;
+  return `🎮 ${config.GAME_NAME}\n🎯 ရွေးချယ်မှုးနဲ့ ထိုးကြေး: ${ch === 'B' ? '𝑩𝒊𝒈' : '𝑺𝒎𝒂𝒍𝒍'} ${skipBetting ? 0 : (amount ).toFixed(2)} Ks\n🧭 ${gameType}: ${currentIssue}`;
 };
 
 const formatWinMessage = (amount, bigSmall, number, balance, profit) => {
@@ -1356,16 +1356,16 @@ const formatInfoMessage = (config, userInfo, settings, currentBalance, gameType,
   const stopLossDisplay = typeof stopLoss === 'number' ? stopLoss.toFixed(2) + ' Ks' : '𝑵𝒐𝒕 𝑺𝒆𝒕';
   
   return (
-    `📊 𝑼𝑺𝑬𝑹 𝑰𝑵𝑭𝑶\n` +
+    `📊 အသုံးပြုသူ အချက်အလက်\n` +
     `════════════════════════\n` +
-    `🎮 𝑷𝒍𝒂𝒕𝒇𝒐𝒓𝒎: ${config.GAME_NAME}\n` +
-    `👤 𝑼𝒔𝒆𝒓 𝑰𝑫: ${userInfo?.user_id || 'N/A'}\n` +
-    `🧩 𝑩𝒂𝒍𝒂𝒏𝒄𝒆: ${balanceDisplay} Ks\n` +
+    `🎮 ဂိမ်းအမျိုးအစား: ${config.GAME_NAME}\n` +
+    `👤 အသုံးပြုသူအကောင့် 𝑰𝑫: ${userInfo?.user_id || 'N/A'}\n` +
+    `🧩 လက်ကျန်ငွေ ပမာဏ: ${balanceDisplay} Ks\n` +
     `🫆 တိတ်ဆိတ်မှု မုဒ်: ${silentMode}\n` +
     `════════════════════════\n` +
     `⚙️ 𝑺𝑬𝑻𝑻𝑰𝑵𝑮𝑺\n` +
     `════════════════════════\n` +
-    `🎮 𝑮𝒂𝒎𝒆: ${gameType}\n` +
+    `🎮 ဂိမ်း: ${gameType}\n` +
     `🎛 𝑴𝒐𝒅𝒆: ${mode}\n` +
     `📚 နည်းဗျူဟာ: ${strategyName}\n` +
     `🕹 𝑩𝒆𝒕𝒕𝒊𝒏𝒈 𝑺𝒕𝒓𝒂𝒕𝒆𝒈𝒚: ${bettingStrategy}\n` +
@@ -2215,9 +2215,9 @@ const bettingWorker = async (userId, chatId) => {
   const startMessage = `
 🔋 𝑩𝑶𝑻 𝑨𝑪𝑻𝑰𝑽𝑨𝑻𝑬𝑫
 
-🎮 𝑷𝒍𝒂𝒕𝒇𝒐𝒓𝒎: ${config.GAME_NAME}
-💳 𝑩𝒂𝒍𝒂𝒏𝒄𝒆: ${displayBalance}
-🎲 𝑮𝒂𝒎𝒆: ${gameType}
+🎮 ဂိမ်းအမျိုးအစား: ${config.GAME_NAME}
+💳 လက်ကျန်ငွေ: ${displayBalance}
+🎲 ဂိမ်း: ${gameType}
 🎯 𝑻𝒚𝒑𝒆: 𝑩𝒊𝒈/𝑺𝒎𝒂𝒍𝒍
 📚 နည်းဗျူဟာ: ${strategyDisplay}
 🕹 𝑩𝒆𝒕𝒕𝒊𝒏𝒈: ${bettingStrategyDisplay}
@@ -2652,7 +2652,7 @@ bot.onText(/\/start/, async (msg) => {
   
   if (checkUserLoggedIn(userId)) {
     await sendMessageWithRetry(chatId, 
-      `🤖 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝑩𝒂𝒄𝒌!\n\n🎮 မင်္ဂလာပါမိတ်ဆွေ အကေညင့်ဝင်ပြီးသားပါ\n\nအောက်က Menu ထဲမှ Buttonများကိုနှိပ်ပါ:`,
+      `🤖 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝑩𝒂𝒄𝒌!\n\n🎮 မင်္ဂလာပါမိတ်ဆွေ အကောင့်ဝင်ပြီးသားပါ\n\nအောက်က Menu ထဲမှ Buttonများကိုနှိပ်ပါ:`,
       makeMainKeyboard(true, userId)
     );
   } else {
@@ -3921,7 +3921,7 @@ bot.on('message', async (msg) => {
         
         if (!settings.running) {
           await sendMessageWithRetry(chatId, 
-            `⚠️သင်သည် Botအား Bot အား ရပ်တန့် ထားပါတယ်\n\n.\n\n🚀 စတင်ကစားမယ် ကိုနှိပ်၍ ကစားနိုင်သည်`,
+            `⚠️သင်သည် Botအား Bot အား ရပ်တန့်ထားပါတယ်\n\n🚀 စတင်ကစားမယ် ကိုနှိပ်၍ ကစားနိုင်သည်\n\nပြဿနာတခုခုဖြစ်ပါက Owner @kiki20251 အား ဆက်သွယ်ပါ`,
             makeMainKeyboard(true, userId)
           );
           return;
