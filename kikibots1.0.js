@@ -571,9 +571,7 @@ const generateStopLossAscii = (startedAmount, totalProfit, finalBalance) => {
 const makePlatformKeyboard = () => {
   return {
     keyboard: [
-      ["🎰 𝟕𝟕𝟕 𝑩𝑰𝑮𝑾𝑰𝑵"],
-      ["🎲 𝑪𝑲 𝑳𝑶𝑻𝑻𝑬𝑹𝒀"],
-      ["🎯 𝟔 𝑳𝑶𝑻𝑻𝑬𝑹𝒀"]
+      ["🎰 𝟕𝟕𝟕 𝑩𝑰𝑮𝑾𝑰𝑵"]
     ],
     resize_keyboard: true,
     one_time_keyboard: true
@@ -1357,26 +1355,26 @@ const formatInfoMessage = (config, userInfo, settings, currentBalance, gameType,
   
   return (
     `📊 အသုံးပြုသူ အချက်အလက်\n` +
-    `════════════════════════\n` +
+    `════════════════\n` +
     `🎮 ဂိမ်းအမျိုးအစား: ${config.GAME_NAME}\n` +
     `👤 အသုံးပြုသူအကောင့် 𝑰𝑫: ${userInfo?.user_id || 'N/A'}\n` +
     `🧩 လက်ကျန်ငွေ ပမာဏ: ${balanceDisplay} Ks\n` +
     `🫆 တိတ်ဆိတ်မှု မုဒ်: ${silentMode}\n` +
-    `════════════════════════\n` +
+    `═════════════════\n` +
     `⚙️ 𝑺𝑬𝑻𝑻𝑰𝑵𝑮𝑺\n` +
-    `════════════════════════\n` +
+    `═════════════════\n` +
     `🎮 ဂိမ်း: ${gameType}\n` +
     `🎛 𝑴𝒐𝒅𝒆: ${mode}\n` +
     `📚 နည်းဗျူဟာ: ${strategyName}\n` +
     `🕹 𝑩𝒆𝒕𝒕𝒊𝒏𝒈 𝑺𝒕𝒓𝒂𝒕𝒆𝒈𝒚: ${bettingStrategy}\n` +
     `💊 လောင်းကြေး သတ်မှတ်ရန်: ${betSizes.map(s => s.toString()).join(', ') || '𝑵𝒐𝒕 𝑺𝒆𝒕'} MMK\n` +
-    `════════════════════════\n` +
+    `═════════════════\n` +
     `🧧 အမြတ်သတ်မှန်ချက်: ${profitTargetDisplay}\n` +
     `🌡️ 𝑺𝒕𝒐𝒑 𝑳𝒐𝒔𝒔: ${stopLossDisplay}\n` +
     `🐦‍🔥𝑺𝑳 𝑳𝒊𝒎𝒊𝒕: ${slLimit !== undefined ? slLimit : '𝑵𝒐𝒕 𝑺𝒆𝒕'}\n` +
     `🎢 𝑬𝒏𝒕𝒓𝒚 𝑳𝒂𝒚𝒆𝒓: ${layerLimit !== undefined ? layerLimit : '𝑵𝒐𝒕 𝑺𝒆𝒕'}\n` +
     `⏰ 𝑻𝒊𝒎𝒆 𝑺𝒕𝒂𝒓𝒕𝒔: ${timeStartInfo}\n` +
-    `════════════════════════\n` +
+    `═════════════════\n` +
     `🚀 𝑺𝒕𝒂𝒕𝒖𝒔: ${running}`
   );
 };
@@ -1389,14 +1387,14 @@ const formatUserStats = () => {
   
   return (
     `📊 𝑺𝒀𝑺𝑻𝑬𝑴 𝑺𝑻𝑨𝑻𝑰𝑺𝑻𝑰𝑪𝑺\n` +
-    `════════════════════════\n` +
+    `═════════════════\n` +
     `${modeStatus}\n` +
-    `════════════════════════\n` +
+    `═════════════════\n` +
     `👥 𝑻𝒐𝒕𝒂𝒍 𝑼𝒔𝒆𝒓𝒔: ${stats.totalUsers}\n` +
     `🟢 𝑨𝒄𝒕𝒊𝒗𝒆 𝑼𝒔𝒆𝒓𝒔: ${stats.activeUsers}\n` +
     `🔴 𝑩𝒂𝒏𝒏𝒆𝒅 𝑼𝒔𝒆𝒓𝒔: ${stats.bannedUsers}\n` +
     `⚫ 𝑰𝒏𝒂𝒄𝒕𝒊𝒗𝒆 𝑼𝒔𝒆𝒓𝒔: ${stats.inactiveUsers}\n` +
-    `════════════════════════`
+    `═════════════════`
   );
 };
 
