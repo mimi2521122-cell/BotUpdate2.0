@@ -6,7 +6,7 @@ const https = require('https');
 const { setTimeout } = require('timers/promises');
 
 const ADMIN_ID = 7308292609;
-const BOT_TOKEN = "8533662019:AAEreVXvp5o8NLZS47aKrDjZjZXH4c3mp8I";
+const BOT_TOKEN = "8707027344:AAE8KKHiFS6MZN3me-LWk98QmcPQ1pC2-hQ";
 const IGNORE_SSL = true;
 const WIN_LOSE_CHECK_INTERVAL = 1000;
 const MAX_RESULT_WAIT_TIME = 60000;
@@ -77,7 +77,7 @@ const userTimeStarts = {};
 const CHANNEL_CONFIG_FILE = 'channel_config.json';
 let requiredChannels = [
   { id: "@KMM_MOD1", name: "🚀 𝐌'_𝐌𝐎𝐃 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🚀" },
-  { id: "@Sketchware_Beginner_Developer", name: "777 Bigwin 30စက္ကန့်" }
+  { id: "@Sketchware_Beginner_Developer", name: "Sketchware Beginner Developer" }
 ];
 
 // Load system mode
@@ -590,15 +590,15 @@ const makeMainKeyboard = (loggedIn = false, userId = null) => {
   
   // Silent mode status ပေါ်မူတည်ပြီး button text ပြောင်းမယ်
   const silentMode = userSilentMode[userId] || false;
-  const silentButton = silentMode ? "🫆 𝑺𝒊𝒍𝒆𝒏𝒕 𝑴𝒐𝒅𝒆" : "🔇 𝑺𝒊𝒍𝒆𝒏𝒕 𝑴𝒐𝒅𝒆";
+  const silentButton = silentMode ? "🫆 တိတ်ဆိတ်မှု မုဒ်" : "🔇 𝑺𝒊𝒍𝒆𝒏𝒕 𝑴𝒐𝒅𝒆";
   
   return {
     keyboard: [
-      ["🔋 𝑨𝒄𝒕𝒊𝒗𝒂𝒕𝒆", "🪫 𝑫𝒆𝒂𝒄𝒕𝒊𝒗𝒂𝒕𝒆"],
-      ["💊 𝑩𝒆𝒕_𝑾𝒓𝒂𝒈𝒆𝒓", "🫆 𝑺𝒊𝒍𝒆𝒏𝒕 𝑴𝒐𝒅𝒆"],
-      ["📟 𝑹𝒊𝒔𝒌 𝑪𝒐𝒏𝒕𝒓𝒐𝒍","🎃 𝑩𝒆𝒕 𝑷𝒍𝒂𝒄𝒆 𝑺𝒆𝒕𝒕𝒊𝒏𝒈𝒔"],
-      ["⏰𝑻𝑰𝑴𝑬 𝑺𝑻𝑨𝑹𝑻⏰","🗃 𝑰𝒏𝒇𝒐"],
-      ["🔐 𝑹𝒆-𝑳𝒐𝒈𝒊𝒏"]
+      ["🔋 စတင်ကစားမယ်", "🪫 ကစာတာ ရပ်မယ်"],
+      ["💊 လောင်းကြေး သတ်မှတ်ရန်", "🫆 တိတ်ဆိတ်မှု မုဒ်"],
+      ["📟 အန္တရာယ်ထိန်းချုပ်မှု","🎃 အလောင်းအစားနေရာသတ်မှတ်ရန်"],
+      ["⏰အချိန် သတ်မှတ်ရန်⏰","🗃 အချက်အလက်"],
+      ["🔐 အကောင့် ပြန်ဝင်မယ်"]
     ],
     resize_keyboard: true,
     one_time_keyboard: false
@@ -610,7 +610,7 @@ const makeBetPlaceSettingsKeyboard = () => {
   return {
     keyboard: [
       ["🕹 𝑨𝒏𝒕𝒊/𝑴𝒂𝒓𝒕𝒊𝒏𝒈𝒂𝒍𝒆"],
-      ["🎲 𝑮𝒂𝒎𝒆 𝑻𝒚𝒑𝒆"],
+      ["🎲 ဂိမ်းအခန်းရွေးရန်"],
       ["🔙 𝑩𝒂𝒄𝒌 𝒕𝒐 𝑨𝒖𝒕𝒐 𝑩𝒆𝒕"]
     ],
     resize_keyboard: true,
@@ -622,11 +622,11 @@ const makeBetPlaceSettingsKeyboard = () => {
 const makeRiskControlKeyboard = () => {
   return {
     keyboard: [
-      ["🧧 𝑷𝒓𝒐𝒇𝒊𝒕 𝑻𝒂𝒓𝒈𝒆𝒕"],
-      ["🌡️ 𝑺𝒕𝒐𝒑 𝑳𝒐𝒔𝒆 𝑳𝒊𝒎𝒊𝒕"],
+      ["🧧 အမြတ်သတ်မှန်ချက်"],
+      ["🌡️သတ်မှတ်ငွေ ရှုံးလျှင် ရပ်"],
       ["⛳ 𝑬𝒏𝒕𝒓𝒚 𝑳𝒂𝒚𝒆𝒓"],
       ["💥 𝑩𝒆𝒕_𝑺𝑳"],
-      ["📚 𝑺𝒕𝒓𝒂𝒕𝒆𝒈𝒚"],
+      ["📚 နည်းဗျူဟာ"],
       ["🔙 𝑩𝒂𝒄𝒌 𝒕𝒐 𝑨𝒖𝒕𝒐 𝑩𝒆𝒕"]
     ],
     resize_keyboard: true,
@@ -879,9 +879,9 @@ const updateProfitMessage = async (userId, chatId, currentBalance, currentProfit
       const updateMessage = `
 📊 𝑳𝑰𝑽𝑬 𝑷𝑹𝑶𝑭𝑰𝑻 𝑼𝑷𝑫𝑨𝑻𝑬
 ════════════════════════
-🎮 𝑷𝒍𝒂𝒕𝒇𝒐𝒓𝒎: ${config.GAME_NAME}
-🎯 𝑮𝒂𝒎𝒆: ${gameType}
-🧩 𝑪𝒖𝒓𝒓𝒆𝒏𝒕 𝑩𝒂𝒍𝒂𝒏𝒄𝒆: ${(currentBalance ).toFixed(2)} Ks
+🎮 ဂိမ်းအမျိုးအစား: ${config.GAME_NAME}
+🎯 ဂိမ်း: ${gameType}
+🧩 လက်ကျန်ငွေ ပမာဏ: ${(currentBalance ).toFixed(2)} Ks
 📈 𝑪𝒖𝒓𝒓𝒆𝒏𝒕 𝑷𝒓𝒐𝒇𝒊𝒕: ${currentProfit >= 0 ? '+' : ''}${currentProfit.toFixed(2)} Ks
 ════════════════════════
 🔄 𝑼𝒑𝒅𝒂𝒕𝒆𝒅: ${new Date().toLocaleTimeString()}
@@ -904,9 +904,9 @@ const updateProfitMessage = async (userId, chatId, currentBalance, currentProfit
       const initialMessage = `
 📊 𝑳𝑰𝑽𝑬 𝑷𝑹𝑶𝑭𝑰𝑻 𝑼𝑷𝑫𝑨𝑻𝑬
 ════════════════════════
-🎮 𝑷𝒍𝒂𝒕𝒇𝒐𝒓𝒎: ${config.GAME_NAME}
-🎯 𝑮𝒂𝒎𝒆: ${gameType}
-🧩 𝑪𝒖𝒓𝒓𝒆𝒏𝒕 𝑩𝒂𝒍𝒂𝒏𝒄𝒆: ${(currentBalance ).toFixed(2)} Ks
+🎮 ဂိမ်းအမျိုးအစား: ${config.GAME_NAME}
+🎯 ဂိမ်း: ${gameType}
+🧩 လက်ကျန်ငွေ ပမာဏ: ${(currentBalance ).toFixed(2)} Ks
 📈 𝑪𝒖𝒓𝒓𝒆𝒏𝒕 𝑷𝒓𝒐𝒇𝒊𝒕: ${currentProfit >= 0 ? '+' : ''}${currentProfit.toFixed(2)} Ks
 ════════════════════════
 🔄 𝑼𝒑𝒅𝒂𝒕𝒆𝒅: ${new Date().toLocaleTimeString()}
@@ -1270,7 +1270,7 @@ const formatLoginMessage = (platform, gameName) => {
     "🔓 𝑭𝑹𝑬𝑬 𝑴𝑶𝑫𝑬 - 𝑨𝒍𝒍 𝒖𝒔𝒆𝒓𝒔 𝒘𝒆𝒍𝒄𝒐𝒎𝒆!" : 
     "🔒 𝑷𝑹𝑬𝑴𝑰𝑼𝑴 𝑴𝑶𝑫𝑬 - 𝑨𝒖𝒕𝒉𝒐𝒓𝒊𝒛𝒆𝒅 𝒖𝒔𝒆𝒓𝒔 𝒐𝒏𝒍𝒚";
   
-  return `🎰 𝑺𝒆𝒍𝒆𝒄𝒕𝒆𝒅: ${gameName}\n${modeInfo}\n\n𝑵𝒐𝒘 𝒑𝒍𝒆𝒂𝒔𝒆 𝒍𝒐𝒈𝒊𝒏 𝒘𝒊𝒕𝒉:\n\n𝑳𝒐𝒈𝒊𝒏\n𝒀𝒐𝒖𝒓𝑷𝒉𝒐𝒏𝒆𝑵𝒖𝒎𝒃𝒆𝒓\n𝒀𝒐𝒖𝒓𝑷𝒂𝒔𝒔𝒘𝒐𝒓𝒅`;
+  return `🎰 𝑺𝒆𝒍𝒆𝒄𝒕𝒆𝒅: ${gameName}\n${modeInfo}\n\nကျေးဇူးပြု၍ အကောင့်ဝင်ပါ:\n\nနမူနာ\n\n𝑳𝒐𝒈𝒊𝒏\n912345678\nKi123451`;
 };
 
 const formatWelcomeMessage = () => {
@@ -1278,19 +1278,16 @@ const formatWelcomeMessage = () => {
     "🔓 𝑭𝑹𝑬𝑬 𝑴𝑶𝑫𝑬 - 𝑶𝒑𝒆𝒏 𝒇𝒐𝒓 𝒆𝒗𝒆𝒓𝒚𝒐𝒏𝒆" : 
     "🔒 𝑷𝑹𝑬𝑴𝑰𝑼𝑴 𝑴𝑶𝑫𝑬 - 𝑬𝒙𝒄𝒍𝒖𝒔𝒊𝒗𝒆 𝒂𝒄𝒄𝒆𝒔𝒔";
   
-  return `◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆
-       မင်္ဂလာပါ ယခုBotကို မောင်ကီကီမှ ထုတ်လုပ်ပေးခြင်းဖြသ်ပါတယ် အဆင်မပြေပါက Admin @kiki20251 အား ဆက်သွယ်ပါ
-◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆\n${modeInfo}\n\n𝗙𝗘𝗔𝗧𝗨𝗥𝗘𝗦 ✨
+  return `မင်္ဂလာပါ ယခုBotကို မောင်ကီကီမှ  အဆင်မပြေပါက Admin @kiki20251 အား ဆက်သွယ်ပါ\n${modeInfo}\n\n𝗙𝗘𝗔𝗧𝗨𝗥𝗘𝗦 ✨
 ├─ 🎯 𝑨𝒖𝒕𝒐 𝑩𝒆𝒕
 ├─ 🤖 𝑩&𝑺 𝑨𝒍𝒈𝒐𝒓𝒊𝒕𝒉𝒎
 └─ ⏳ 𝟐𝟒/𝟕 𝑨𝒄𝒕𝒊𝒗𝒆
 ├─ 🎰 𝟕𝟕𝟕 𝑩𝑰𝑮𝑾𝑰𝑵:
    https://www.777bigwingame.co/#/register?invitationCode=84318565611
-   
+================================
 📞 𝗖𝗢𝗡𝗧𝗔𝗖𝗧 𝗜𝗙𝗢 📞
 ├─ 👑 𝑨𝒅𝒎𝒊𝒏: @kiki20251
-
-◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆
+================================
    🚀 𝑺𝑻𝑨𝑹𝑻: Click 🔐 𝑳𝒐𝒈𝒊𝒏`;
 };
 
@@ -1299,27 +1296,27 @@ const formatLoginSuccess = (config, userInfo, balance) => {
     "🔓 𝑭𝑹𝑬𝑬 𝑴𝑶𝑫𝑬 𝑨𝒄𝒄𝒆𝒔𝒔" : 
     "🔒 𝑷𝑹𝑬𝑴𝑰𝑼𝑴 𝑴𝑶𝑫𝑬 𝑨𝒄𝒄𝒆𝒔𝒔";
   
-  return `🎄𝑳𝒐𝒈𝒊𝒏 𝑺𝒖𝒄𝒄𝒆𝒔𝒔!\n${modeStatus}\n🎮 𝑷𝒍𝒂𝒕𝒇𝒐𝒓𝒎: ${config.GAME_NAME}\n🆔 𝑼𝒔𝒆𝒓 𝑰𝑫: ${userInfo.user_id}\n💳 𝑩𝒂𝒍𝒂𝒏𝒄𝒆: ${(balance ).toFixed(2)} Ks`;
+  return `🎄အကောင့်ဝင်ခြင်း အောင်မြင်ခြင်း!\n${modeStatus}\n🎮 အမျိုးအစား: ${config.GAME_NAME}\n🆔 အသုံးပြုသူ အကောင့် 𝑰𝑫: ${userInfo.user_id}\n💳 လက်ကျန်ငွေ ပမာဏ: ${(balance ).toFixed(2)} Ks`;
 };
 
 const formatBetMessage = (config, gameType, currentIssue, ch, amount, skipBetting) => {
-  return `🎮 ${config.GAME_NAME}\n🎯 𝑩𝒆𝒕: ${ch === 'B' ? '𝑩𝒊𝒈' : '𝑺𝒎𝒂𝒍𝒍'} ${skipBetting ? 0 : (amount ).toFixed(2)} Ks\n🧭 ${gameType}: ${currentIssue}`;
+  return `🎮 ${config.GAME_NAME}\n🎯 ရွေးချယ်မှု : ${ch === 'B' ? '𝑩𝒊𝒈' : '𝑺𝒎𝒂𝒍𝒍'} \n💵 ထိုးကြေး  : ${skipBetting ? 0 : (amount ).toFixed(2)} Ks\n🧭 ${gameType}: ${currentIssue}`;
 };
 
 const formatWinMessage = (amount, bigSmall, number, balance, profit) => {
-  return `🏆 𝑾𝑰𝑵 +${(amount ).toFixed(2)} Ks\n════════════════════════\n📊 𝑹𝒆𝒔𝒖𝒍𝒕: ${bigSmall} (${number})\n🧩 𝑩𝒂𝒍𝒂𝒏𝒄𝒆: ${(balance ).toFixed(2)} Ks\n📈 𝑻𝒐𝒕𝒂𝒍 𝑷𝒓𝒐𝒇𝒊𝒕: ${profit >= 0 ? '+' : ''}${profit.toFixed(2)} Ks`;
+  return `🏆 အနိုင်ရရှိသည် +${(amount ).toFixed(2)} Ks\n════════════════════════\n📊 ရလဒ်: ${bigSmall} (${number})\n🧩 လက်ကျန်ငွေ: ${(balance ).toFixed(2)} Ks\n📈 𝑻𝒐𝒕𝒂𝒍 𝑷𝒓𝒐𝒇𝒊𝒕: ${profit >= 0 ? '+' : ''}${profit.toFixed(2)} Ks`;
 };
 
 const formatLoseMessage = (amount, bigSmall, number, balance, profit) => {
-  return `⛔ 𝑳𝑶𝑺𝑬 -${(amount ).toFixed(2)} Ks\n════════════════════════\n📊 𝑹𝒆𝒔𝒖𝒍𝒕: ${bigSmall} (${number})\n🧩 𝑩𝒂𝒍𝒂𝒏𝒄𝒆: ${(balance ).toFixed(2)} Ks\n📉 𝑻𝒐𝒕𝒂𝒍 𝑷𝒓𝒐𝒇𝒊𝒕: ${profit >= 0 ? '+' : ''}${profit.toFixed(2)} Ks`;
+  return `⛔ ရှုံးပါတယ် -${(amount ).toFixed(2)} Ks\n════════════════════════\n📊 ရလဒ်: ${bigSmall} (${number})\n🧩 လက်ကျန်ငွေ: ${(balance ).toFixed(2)} Ks\n📉 𝑻𝒐𝒕𝒂𝒍 𝑷𝒓𝒐𝒇𝒊𝒕: ${profit >= 0 ? '+' : ''}${profit.toFixed(2)} Ks`;
 };
 
 const formatInfoMessage = (config, userInfo, settings, currentBalance, gameType, userId) => {
-  let strategyName = "❌ 𝑵𝑶𝑻 𝑺𝑬𝑳𝑬𝑪𝑻𝑬𝑫";
+  let strategyName = "❌ ရွေးချယ်မထားပါ ";
   const strategy = settings.strategy;
   
   if (!strategy) {
-    strategyName = "❌ 𝑵𝑶𝑻 𝑺𝑬𝑳𝑬𝑪𝑻𝑬𝑫\n👉 𝑮𝒐 𝒕𝒐 '📟 𝑹𝒊𝒔𝒌 𝑪𝒐𝒏𝒕𝒓𝒐𝒍' → '📚 𝑺𝒕𝒓𝒂𝒕𝒆𝒈𝒚' 𝒕𝒐 𝒄𝒉𝒐𝒐𝒔𝒆";
+    strategyName = "❌ ရွေးချယ်မထားပါ\n👉 𝑮𝒐 𝒕𝒐 '📟 အန္တရာယ်ထိန်းချုပ်မှု' → '📚 နည်းဗျူဟာ' 𝒕𝒐 𝒄𝒉𝒐𝒐𝒔𝒆";
   }
   else if (strategy === "QUANTUM_BRAIN") {
     strategyName = "🔥 𝑸𝑼𝑨𝑵𝑻𝑼𝑴 𝑩𝑹𝑨𝑰𝑵";
@@ -1344,7 +1341,7 @@ const formatInfoMessage = (config, userInfo, settings, currentBalance, gameType,
   const slLimit = settings.sl_limit;
   const layerLimit = settings.layer_limit;
   const mode = settings.mode || "REAL";
-  const running = settings.running ? '🔋 𝑨𝒄𝒕𝒊𝒗𝒂𝒕𝒆' : '🪫 𝑫𝒆𝒂𝒄𝒕𝒊𝒗𝒂𝒕𝒆';
+  const running = settings.running ? '🔋 စတင်ကစားမယ်' : '🪫 ကစာတာ ရပ်မယ်';
   
   const silentMode = userSilentMode && userSilentMode[userId] ? '🔇 𝑶𝒏' : '🔈 𝑶𝒇𝒇';
   
@@ -1357,27 +1354,27 @@ const formatInfoMessage = (config, userInfo, settings, currentBalance, gameType,
   const stopLossDisplay = typeof stopLoss === 'number' ? stopLoss.toFixed(2) + ' Ks' : '𝑵𝒐𝒕 𝑺𝒆𝒕';
   
   return (
-    `📊 𝑼𝑺𝑬𝑹 𝑰𝑵𝑭𝑶\n` +
-    `════════════════════════\n` +
-    `🎮 𝑷𝒍𝒂𝒕𝒇𝒐𝒓𝒎: ${config.GAME_NAME}\n` +
-    `👤 𝑼𝒔𝒆𝒓 𝑰𝑫: ${userInfo?.user_id || 'N/A'}\n` +
-    `🧩 𝑩𝒂𝒍𝒂𝒏𝒄𝒆: ${balanceDisplay} Ks\n` +
-    `🫆 𝑺𝒊𝒍𝒆𝒏𝒕 𝑴𝒐𝒅𝒆: ${silentMode}\n` +
-    `════════════════════════\n` +
+    `📊 အသုံးပြုသူ အချက်အလက်\n` +
+    `════════════════\n` +
+    `🎮 ဂိမ်းအမျိုးအစား: ${config.GAME_NAME}\n` +
+    `👤 အသုံးပြုသူအကောင့် 𝑰𝑫: ${userInfo?.user_id || 'N/A'}\n` +
+    `🧩 လက်ကျန်ငွေ ပမာဏ: ${balanceDisplay} Ks\n` +
+    `🫆 တိတ်ဆိတ်မှု မုဒ်: ${silentMode}\n` +
+    `═════════════════\n` +
     `⚙️ 𝑺𝑬𝑻𝑻𝑰𝑵𝑮𝑺\n` +
-    `════════════════════════\n` +
-    `🎮 𝑮𝒂𝒎𝒆: ${gameType}\n` +
+    `═════════════════\n` +
+    `🎮 ဂိမ်း: ${gameType}\n` +
     `🎛 𝑴𝒐𝒅𝒆: ${mode}\n` +
-    `📚 𝑺𝒕𝒓𝒂𝒕𝒆𝒈𝒚: ${strategyName}\n` +
+    `📚 နည်းဗျူဟာ: ${strategyName}\n` +
     `🕹 𝑩𝒆𝒕𝒕𝒊𝒏𝒈 𝑺𝒕𝒓𝒂𝒕𝒆𝒈𝒚: ${bettingStrategy}\n` +
-    `💊 𝑩𝒆𝒕_𝑾𝒓𝒂𝒈𝒆𝒓: ${betSizes.map(s => s.toString()).join(', ') || '𝑵𝒐𝒕 𝑺𝒆𝒕'} MMK\n` +
-    `════════════════════════\n` +
-    `🧧 𝑷𝒓𝒐𝒇𝒊𝒕 𝑻𝒂𝒓𝒈𝒆𝒕: ${profitTargetDisplay}\n` +
+    `💊 လောင်းကြေး သတ်မှတ်ရန်: ${betSizes.map(s => s.toString()).join(', ') || '𝑵𝒐𝒕 𝑺𝒆𝒕'} MMK\n` +
+    `═════════════════\n` +
+    `🧧 အမြတ်သတ်မှန်ချက်: ${profitTargetDisplay}\n` +
     `🌡️ 𝑺𝒕𝒐𝒑 𝑳𝒐𝒔𝒔: ${stopLossDisplay}\n` +
     `🐦‍🔥𝑺𝑳 𝑳𝒊𝒎𝒊𝒕: ${slLimit !== undefined ? slLimit : '𝑵𝒐𝒕 𝑺𝒆𝒕'}\n` +
     `🎢 𝑬𝒏𝒕𝒓𝒚 𝑳𝒂𝒚𝒆𝒓: ${layerLimit !== undefined ? layerLimit : '𝑵𝒐𝒕 𝑺𝒆𝒕'}\n` +
     `⏰ 𝑻𝒊𝒎𝒆 𝑺𝒕𝒂𝒓𝒕𝒔: ${timeStartInfo}\n` +
-    `════════════════════════\n` +
+    `═════════════════\n` +
     `🚀 𝑺𝒕𝒂𝒕𝒖𝒔: ${running}`
   );
 };
@@ -1390,14 +1387,14 @@ const formatUserStats = () => {
   
   return (
     `📊 𝑺𝒀𝑺𝑻𝑬𝑴 𝑺𝑻𝑨𝑻𝑰𝑺𝑻𝑰𝑪𝑺\n` +
-    `════════════════════════\n` +
+    `═════════════════\n` +
     `${modeStatus}\n` +
-    `════════════════════════\n` +
+    `═════════════════\n` +
     `👥 𝑻𝒐𝒕𝒂𝒍 𝑼𝒔𝒆𝒓𝒔: ${stats.totalUsers}\n` +
     `🟢 𝑨𝒄𝒕𝒊𝒗𝒆 𝑼𝒔𝒆𝒓𝒔: ${stats.activeUsers}\n` +
     `🔴 𝑩𝒂𝒏𝒏𝒆𝒅 𝑼𝒔𝒆𝒓𝒔: ${stats.bannedUsers}\n` +
     `⚫ 𝑰𝒏𝒂𝒄𝒕𝒊𝒗𝒆 𝑼𝒔𝒆𝒓𝒔: ${stats.inactiveUsers}\n` +
-    `════════════════════════`
+    `═════════════════`
   );
 };
 
@@ -2216,14 +2213,14 @@ const bettingWorker = async (userId, chatId) => {
   const startMessage = `
 🔋 𝑩𝑶𝑻 𝑨𝑪𝑻𝑰𝑽𝑨𝑻𝑬𝑫
 
-🎮 𝑷𝒍𝒂𝒕𝒇𝒐𝒓𝒎: ${config.GAME_NAME}
-💳 𝑩𝒂𝒍𝒂𝒏𝒄𝒆: ${displayBalance}
-🎲 𝑮𝒂𝒎𝒆: ${gameType}
+🎮 ဂိမ်းအမျိုးအစား: ${config.GAME_NAME}
+💳 လက်ကျန်ငွေ: ${displayBalance}
+🎲 ဂိမ်း: ${gameType}
 🎯 𝑻𝒚𝒑𝒆: 𝑩𝒊𝒈/𝑺𝒎𝒂𝒍𝒍
-📚 𝑺𝒕𝒓𝒂𝒕𝒆𝒈𝒚: ${strategyDisplay}
+📚 နည်းဗျူဟာ: ${strategyDisplay}
 🕹 𝑩𝒆𝒕𝒕𝒊𝒏𝒈: ${bettingStrategyDisplay}
-🧧 𝑷𝒓𝒐𝒇𝒊𝒕 𝑻𝒂𝒓𝒈𝒆𝒕: ${profitTargetDisplay}
-🌡️ 𝑺𝒕𝒐𝒑 𝑳𝒐𝒔𝒆 𝑳𝒊𝒎𝒊𝒕: ${stopLossDisplay}
+🧧 အမြတ်သတ်မှန်ချက်: ${profitTargetDisplay}
+🌡️သတ်မှတ်ငွေ ရှုံးလျှင် ရပ်: ${stopLossDisplay}
 `;
   
   await sendMessageWithRetry(chatId, startMessage, makeMainKeyboard(true, userId));
@@ -2244,7 +2241,7 @@ const bettingWorker = async (userId, chatId) => {
   const minBetAmount = Math.min(...betSizes);
   if (currentBalance < minBetAmount) {
     log('ERROR', `❌ Insufficient balance for user ${userId}: ${currentBalance} < ${minBetAmount}`);
-    await sendMessageWithRetry(chatId, "❗ 𝑩𝒂𝒍𝒂𝒏𝒄𝒆 𝒊𝒔 𝒏𝒐𝒕 𝒆𝒏𝒐𝒖𝒈𝒉 𝒇𝒐𝒓 𝑩𝒆𝒕.𝑫𝒆𝒑𝒐𝒔𝒊𝒕 𝒂𝒏𝒅 𝑺𝒕𝒂𝒓𝒕 𝒂𝒈𝒂𝒊𝒏.");
+    await sendMessageWithRetry(chatId, "❗ လောင်းကြေးထိုးရန် လက်ကျန်ငွေ မလုံလောက်ပါ ငွေဖြည့်သွင်းပြီးမှ ပြန်လည်စတင်ပါ.");
     settings.running = false;
     return;
   }
@@ -2491,7 +2488,7 @@ const bettingWorker = async (userId, chatId) => {
       
       if (!skipBetting && currentBalance < amount) {
         log('ERROR', `❌ Insufficient balance for user ${userId}: ${currentBalance} < ${amount}`);
-        await sendMessageWithRetry(chatId, "❗ 𝑩𝒂𝒍𝒂𝒏𝒄𝒆 𝒊𝒔 𝒏𝒐𝒕 𝒆𝒏𝒐𝒖𝒈𝒉 𝒇𝒐𝒓 𝑩𝒆𝒕.𝑫𝒆𝒑𝒐𝒔𝒊𝒕 𝒂𝒏𝒅 𝑺𝒕𝒂𝒓𝒕 𝒂𝒈𝒂𝒊𝒏.");
+        await sendMessageWithRetry(chatId, "❗ လောင်းကြေးထိုးရန် လက်ကျန်ငွေ မလုံလောက်ပါ ငွေဖြည့်သွင်းပြီးမှ ပြန်လည်စတင်ပါ.");
         settings.running = false;
         break;
       }
@@ -2653,7 +2650,7 @@ bot.onText(/\/start/, async (msg) => {
   
   if (checkUserLoggedIn(userId)) {
     await sendMessageWithRetry(chatId, 
-      `🤖 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝑩𝒂𝒄𝒌!\n\n🎮 𝑴𝒖𝒍𝒕𝒊-𝑷𝒍𝒂𝒕𝒇𝒐𝒓𝒎 𝑨𝒖𝒕𝒐 𝑩𝒆𝒕 𝑩𝒐𝒕\n\n𝑼𝒔𝒆 𝒕𝒉𝒆 𝒎𝒆𝒏𝒖 𝒃𝒆𝒍𝒐𝒘:`,
+      `🤖 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝑩𝒂𝒄𝒌!\n\n🎮 မင်္ဂလာပါမိတ်ဆွေ အကောင့်ဝင်ပြီးသားပါ\n\nအောက်က Menu ထဲမှ Buttonများကိုနှိပ်ပါ:`,
       makeMainKeyboard(true, userId)
     );
   } else {
@@ -3148,9 +3145,9 @@ bot.on('callback_query', async (query) => {
         
         // Send welcome message
         await sendMessageWithRetry(chatId,
-          `🎄𝑪𝑯𝑨𝑵𝑵𝑬𝑳 𝑽𝑬𝑹𝑰𝑭𝑰𝑪𝑨𝑻𝑰𝑶𝑵 𝑺𝑼𝑪𝑪𝑬𝑺𝑺𝑭𝑼𝑳!\n\n` +
-          `🎉 𝑪𝒐𝒏𝒈𝒓𝒂𝒕𝒖𝒍𝒂𝒕𝒊𝒐𝒏𝒔! 𝒀𝒐𝒖 𝒉𝒂𝒗𝒆 𝒋𝒐𝒊𝒏𝒆𝒅 𝒂𝒍𝒍 𝒓𝒆𝒒𝒖𝒊𝒓𝒆𝒅 𝒄𝒉𝒂𝒏𝒏𝒆𝒍𝒔.\n\n` +
-          `👉 𝑵𝒐𝒘 𝒔𝒆𝒍𝒆𝒄𝒕 𝒚𝒐𝒖𝒓 𝒑𝒍𝒂𝒕𝒇𝒐𝒓𝒎 𝒕𝒐 𝒄𝒐𝒏𝒕𝒊𝒏𝒖𝒆:`,
+          `🎄ချန်နယ်များ ဝင်ရောက်ခြင်း အတည်ပြုပြီးပါပြီ!\n\n` +
+          `🎉 ဂုဏ်ယူပါတယ် မိတ်ဆွေ သင် Channel အားလုံးကို Join နိုင်ခဲ့ပြီ.\n\n` +
+          `👉 ယခုBot ကို စတင် အသုံးပြုရန် /start ကို နှိပ်လိုက်ပါ \n\nDeveloper By:  @kiki20251:`,
           makePlatformKeyboard()
         );
         
@@ -3165,7 +3162,7 @@ bot.on('callback_query', async (query) => {
           statusMessage += `${index + 1}. ${result.channel.name}: ${status}\n`;
         });
         
-        statusMessage += `\n⚠️ 𝑷𝒍𝒆𝒂𝒔𝒆 𝒋𝒐𝒊𝒏 𝒂𝒍𝒍 𝒄𝒉𝒂𝒏𝒏𝒆𝒍𝒔 𝒂𝒏𝒅 𝒄𝒍𝒊𝒄𝒌 "🔄 𝑪𝒉𝒆𝒄𝒌 𝑨𝒈𝒂𝒊𝒏"`;
+        statusMessage += `\n⚠️ ကျေးဇူးပြု၍ Channelအားလုံးကို Joinပါ "🔄 ပြန်လည်ကြိုးစားကြည့်ပါ "`;
         
         await bot.editMessageText(statusMessage, {
           chat_id: chatId,
@@ -3400,7 +3397,7 @@ bot.on('message', async (msg) => {
       const password = lines[2];
       
       log('INFO', `🔐 Processing login for user ${userId} on ${config.GAME_NAME}: username=${username}`);
-      await sendMessageWithRetry(chatId, "🔍 𝑪𝒉𝒆𝒄𝒌𝒊𝒏𝒈 𝒍𝒐𝒈𝒊𝒏...");
+      await sendMessageWithRetry(chatId, "🔍 အကောင့်ဝင်ခြင်း စစ်ဆေးနေသည် ခဏစောင့်ပါ.......");
       
       const [res, session] = await loginRequest(platform, username, password);
       
@@ -3499,7 +3496,7 @@ bot.on('message', async (msg) => {
       
       const config = getPlatformConfig(platform);
       log('INFO', `🔐 Processing login for user ${userId} on ${config.GAME_NAME}: username=${phone}`);
-      await sendMessageWithRetry(chatId, "🔍 𝑪𝒉𝒆𝒄𝒌𝒊𝒏𝒈 𝒍𝒐𝒈𝒊𝒏...");
+      await sendMessageWithRetry(chatId, "🔍 အကောင့်ဝင်ခြင်း စစ်ဆေးနေသည် ခဏစောင့်ပါ....");
       
       const [res, session] = await loginRequest(platform, phone, password);
       
@@ -3553,14 +3550,14 @@ bot.on('message', async (msg) => {
           await sendMessageWithRetry(chatId, formatLoginSuccess(config, userInfo, balanceDisplay), makeMainKeyboard(true, userId));
         } else {
           await sendMessageWithRetry(chatId, 
-            `❌ 𝑳𝒐𝒈𝒊𝒏 𝑭𝒂𝒊𝒍𝒆𝒅\n\n𝑼𝒏𝒂𝒃𝒍𝒆 𝒕𝒐 𝒓𝒆𝒕𝒓𝒊𝒆𝒗𝒆 𝒖𝒔𝒆𝒓 𝒊𝒏𝒇𝒐𝒓𝒎𝒂𝒕𝒊𝒐𝒏.\n\n🔑 𝑷𝒍𝒆𝒂𝒔𝒆 𝒄𝒉𝒆𝒄𝒌 𝒚𝒐𝒖𝒓 𝒄𝒓𝒆𝒅𝒆𝒏𝒕𝒊𝒂𝒍𝒔 𝒂𝒏𝒅 𝒕𝒓𝒚 𝒂𝒈𝒂𝒊𝒏`,
+            `❌ အကောင့်ဝင်ခြင်း မအောင်မြင်\n\n𝑼𝒏𝒂𝒃𝒍𝒆 𝒕𝒐 𝒓𝒆𝒕𝒓𝒊𝒆𝒗𝒆 𝒖𝒔𝒆𝒓 𝒊𝒏𝒇𝒐𝒓𝒎𝒂𝒕𝒊𝒐𝒏.\n\n🔑 အကောင့်ဝင်ခြင်း မအောင်မြင်ပါ တခုခု မှားယွင်းနေပါတယ် ပြန်လည်ကြိုးစားပါ`,
             makeLoginKeyboard()
           );
         }
       } else {
         const errorMsg = res.msg || "Login failed";
         await sendMessageWithRetry(chatId, 
-          `❌ 𝑳𝒐𝒈𝒊𝒏 𝑬𝒓𝒓𝒐𝒓\n\n${errorMsg}\n\n🔑 𝑷𝒍𝒆𝒂𝒔𝒆 𝒄𝒉𝒆𝒄𝒌 𝒚𝒐𝒖𝒓 𝒄𝒓𝒆𝒅𝒆𝒏𝒕𝒊𝒂𝒍𝒔 𝒂𝒏𝒅 𝒕𝒓𝒚 𝒂𝒈𝒂𝒊𝒏`,
+          `❌ 𝑳𝒐𝒈𝒊𝒏 𝑬𝒓𝒓𝒐𝒓\n\n${errorMsg}\n\n🔑 အကောင့်ဝင်ခြင်း မအောင်မြင်ပါ တခုခု မှားယွင်းနေပါတယ် ပြန်လည်ကြိုးစားပါ`,
           makeLoginKeyboard()
         );
       }
@@ -3570,7 +3567,7 @@ bot.on('message', async (msg) => {
     }
     
     await sendMessageWithRetry(chatId, 
-      `🔐 𝑳𝒐𝒈𝒊𝒏 𝑰𝒏𝒔𝒕𝒓𝒖𝒄𝒕𝒊𝒐𝒏𝒔\n\n📝 𝑭𝒐𝒓𝒎𝒂𝒕:\n𝑳𝒐𝒈𝒊𝒏\n𝒀𝒐𝒖𝒓𝑷𝒉𝒐𝒏𝒆𝑵𝒖𝒎𝒃𝒆𝒓\n𝒀𝒐𝒖𝒓𝑷𝒂𝒔𝒔𝒘𝒐𝒓𝒅\n\n📱 𝑬𝒙𝒂𝒎𝒑𝒍𝒆:\n𝑳𝒐𝒈𝒊𝒏\n09123456789\n𝒑𝒂𝒔𝒔𝒘𝒐𝒓𝒅123\n\n⚠️ 𝑷𝒉𝒐𝒏𝒆 𝒏𝒖𝒎𝒃𝒆𝒓 𝒔𝒉𝒐𝒖𝒍𝒅 𝒏𝒐𝒕 𝒊𝒏𝒄𝒍𝒖𝒅𝒆 𝒄𝒐𝒖𝒏𝒕𝒓𝒚 𝒄𝒐𝒅𝒆 𝒑𝒓𝒆𝒇𝒊𝒙`
+      `🔐 Login ဝင်ရောက်ခြင်း\n\n📝 ပုံစံ:\n𝑳𝒐𝒈𝒊𝒏\n𝒀𝒐𝒖𝒓𝑷𝒉𝒐𝒏𝒆𝑵𝒖𝒎𝒃𝒆𝒓\n𝒀𝒐𝒖𝒓𝑷𝒂𝒔𝒔𝒘𝒐𝒓𝒅\n\n📱 နမူနာ:\n𝑳𝒐𝒈𝒊𝒏\n09123456789\nKi124343\n\n⚠️ ဖုန်းနံပါတ်မှာ ရှေ့က 0 ထည့်ရန် မလိုပါ`
     );
     return;
   }
@@ -3585,7 +3582,7 @@ bot.on('message', async (msg) => {
     }
     
     await sendMessageWithRetry(chatId, 
-      `🔐 𝑳𝒐𝒈𝒊𝒏 𝑹𝒆𝒒𝒖𝒊𝒓𝒆𝒅\n\n𝑷𝒍𝒆𝒂𝒔𝒆 𝒍𝒐𝒈𝒊𝒏 𝒇𝒊𝒓𝒔𝒕 𝒕𝒐 𝒖𝒔𝒆 𝒕𝒉𝒆 𝒃𝒐𝒕 𝒇𝒆𝒂𝒕𝒖𝒓𝒆𝒔.\n\n👇 𝑺𝒆𝒍𝒆𝒄𝒕 𝒚𝒐𝒖𝒓 𝒑𝒍𝒂𝒕𝒇𝒐𝒓𝒎:`,
+      `🔐 အကောင့်ဝင်ခြင်း\n\nအကောင့်ဝင်ရန် ဂိမ်းအမျိုးအစားရွေးပါ.\n\n👇 အောက်တွင် ရှိသည်ကို နှိပ်ပါ:`,
       makePlatformKeyboard()
     );
     return;
@@ -3624,7 +3621,7 @@ bot.on('message', async (msg) => {
       userSettings[userId].bet_sizes = betSizes;
       userSettings[userId].dalembert_units = 1;
       await sendMessageWithRetry(chatId, 
-        `💊 𝑩𝒆𝒕_𝑾𝒓𝒂𝒈𝒆𝒓𝒔 𝑼𝒑𝒅𝒂𝒕𝒆𝒅\n\n🧩 𝑺𝒊𝒛𝒆𝒔: ${betSizes.join(', ')} MMK\n\n🎄𝑩𝒆𝒕 𝒔𝒊𝒛𝒆𝒔 𝒄𝒐𝒏𝒇𝒊𝒈𝒖𝒓𝒆𝒅 𝒔𝒖𝒄𝒄𝒆𝒔𝒔𝒇𝒖𝒍𝒍𝒚`,
+        `💊 လောင်ကြေးသတ်မှတ်ခြင်း\n\n🧩 𝑺𝒊𝒛𝒆𝒔: ${betSizes.join(', ')} MMK\n\n🎄လောင်ကြေးသတ်မှတ်ခြင်း အောင်မြင်ပါသည်`,
         makeMainKeyboard(true, userId)
       );
       delete userState[userId];
@@ -3638,7 +3635,7 @@ bot.on('message', async (msg) => {
       
       userSettings[userId].target_profit = target;
       await sendMessageWithRetry(chatId, 
-        `🧧 𝑷𝒓𝒐𝒇𝒊𝒕 𝑻𝒂𝒓𝒈𝒆𝒕 𝑼𝒑𝒅𝒂𝒕𝒆𝒅\n\n🧩 𝑻𝒂𝒓𝒈𝒆𝒕: ${target.toFixed(2)} Ks\n\n🎄𝑻𝒂𝒓𝒈𝒆𝒕 𝒑𝒓𝒐𝒇𝒊𝒕 𝒄𝒐𝒏𝒇𝒊𝒈𝒖𝒓𝒆𝒅 𝒔𝒖𝒄𝒄𝒆𝒔𝒔𝒇𝒖𝒍𝒍𝒚`,
+        `🧧 အမြတ်သတ်မှန်ခြင်း ပြင်ဆင်ပြီး...\n\n🧩 အမြတ်ငွေသတ်မှတ် ပမာဏ: ${target.toFixed(2)} Ks\n\n🎄သတ်မှ်ထားသော နိုင်ငွေပြည့်ရ် Auto ရပ်ခြင်း အောင်မြင်ပါသည်`,
         makeRiskControlKeyboard()
       );
       delete userState[userId];
@@ -3652,7 +3649,7 @@ bot.on('message', async (msg) => {
       
       userSettings[userId].stop_loss = stopLoss;
       await sendMessageWithRetry(chatId, 
-        `🌡️ 𝑺𝒕𝒐𝒑 𝑳𝒐𝒔𝒔 𝑼𝒑𝒅𝒂𝒕𝒆𝒅\n\n📉 𝑳𝒊𝒎𝒊𝒕: ${stopLoss.toFixed(2)} Ks\n\n🎄𝑺𝒕𝒐𝒑 𝒍𝒐𝒔𝒔 𝒄𝒐𝒏𝒇𝒊𝒈𝒖𝒓𝒆𝒅 𝒔𝒖𝒄𝒄𝒆𝒔𝒔𝒇𝒖𝒍𝒍𝒚`,
+        `🌡️သတ်မှတ်ငွေ ရှုံးလျှင် ရပ်\n\n📉 သတ်မှတ်ထားသော ပမာဏ: ${stopLoss.toFixed(2)} Ks\n\n🎄သတ်မှတ်မှတ်ငွေ ရှုံးလျှင်ရပ်ရန် ပြင်ဆင်သတ်မှတ်ပြီးပါပြီ။`,
         makeRiskControlKeyboard()
       );
       delete userState[userId];
@@ -3661,31 +3658,31 @@ bot.on('message', async (msg) => {
       // 🔥 NEW MENU BUTTON HANDLING
       
       // Bet Size button
-      if (rawText.trim() === "💊 𝑩𝒆𝒕_𝑾𝒓𝒂𝒈𝒆𝒓") {
+      if (rawText.trim() === "💊 လောင်းကြေး သတ်မှတ်ရန်") {
         userState[userId] = { state: "INPUT_BET_SIZES" };
         await sendMessageWithRetry(chatId, 
-          `💊 𝑺𝒆𝒕 𝑩𝒆𝒕 𝑾𝒓𝒂𝒈𝒆𝒓\n\n𝑬𝒏𝒕𝒆𝒓 𝒃𝒆𝒕 𝒘𝒓𝒂𝒈𝒆𝒓 𝒊𝒏 MMK (𝒐𝒏𝒆 𝒑𝒆𝒓 𝒍𝒊𝒏𝒆):\n\n100\n200\n500\n\n💡 𝑬𝒙𝒂𝒎𝒑𝒍𝒆: 100 = 100KS`,
+          `💊 လောင်းကြေးသတ်မှတ်ခြင်း\n\nလောင်းကြေးထိုးရန် ထိုးငွေ ပမာဏ ပို့ပါ (တစ်ကြိမ်သာ ပို့ပါ):\n\n100\n200\n500\n\n💡 နမူနာ: 100 = 100KS`,
           makeMainKeyboard(true, userId)
         );
         
       } 
       // 🎃 Bet Place Settings button
-      else if (rawText.trim() === "🎃 𝑩𝒆𝒕 𝑷𝒍𝒂𝒄𝒆 𝑺𝒆𝒕𝒕𝒊𝒏𝒈𝒔") {
-        await sendMessageWithRetry(chatId, "🎃 𝑩𝒆𝒕 𝑷𝒍𝒂𝒄𝒆 𝑺𝒆𝒕𝒕𝒊𝒏𝒈𝒔:", makeBetPlaceSettingsKeyboard());
+      else if (rawText.trim() === "🎃 အလောင်းအစားနေရာသတ်မှတ်ရန်") {
+        await sendMessageWithRetry(chatId, "🎃 အလောင်းအစားနေရာသတ်မှတ်ရန်:", makeBetPlaceSettingsKeyboard());
         
       }
       // 📟 Risk Control button
-      else if (rawText.trim() === "📟 𝑹𝒊𝒔𝒌 𝑪𝒐𝒏𝒕𝒓𝒐𝒍") {
-        await sendMessageWithRetry(chatId, "📟 𝑹𝒊𝒔𝒌 𝑪𝒐𝒏𝒕𝒓𝒐𝒍 𝑴𝒆𝒏𝒖:", makeRiskControlKeyboard());
+      else if (rawText.trim() === "📟 အန္တရာယ်ထိန်းချုပ်မှု") {
+        await sendMessageWithRetry(chatId, "📟 အန္တရာယ်ထိန်းချုပ်မှု 𝑴𝒆𝒏𝒖:", makeRiskControlKeyboard());
         
       }
       // ⏰TIME START button
-      else if (rawText.trim() === "⏰𝑻𝑰𝑴𝑬 𝑺𝑻𝑨𝑹𝑻⏰") {
+      else if (rawText.trim() === "⏰အချိန် သတ်မှတ်ရန်⏰") {
         await sendMessageWithRetry(chatId, "⏰ 𝑻𝒊𝒎𝒆 𝑺𝒕𝒂𝒓𝒕 𝑺𝒆𝒕𝒕𝒊𝒏𝒈𝒔:", makeTimeStartKeyboard());
         
       }
       // 🗃 Info button
-      else if (rawText.trim() === "🗃 𝑰𝒏𝒇𝒐") {
+      else if (rawText.trim() === "🗃 အချက်အလက်") {
         const session = userSessions[userId];
         const userInfo = await getUserInfo(session, platform, userId);
         
@@ -3700,10 +3697,10 @@ bot.on('message', async (msg) => {
         
       }
       // Silent Mode button
-      else if (rawText.trim() === "🫆 𝑺𝒊𝒍𝒆𝒏𝒕 𝑴𝒐𝒅𝒆" || rawText.trim() === "🫆 silentMode") {
+      else if (rawText.trim() === "🫆 တိတ်ဆိတ်မှု မုဒ်" || rawText.trim() === "🫆 silentMode") {
         userSilentMode[userId] = !userSilentMode[userId];
         
-        const modeText = userSilentMode[userId] ? "🔇 𝑺𝒊𝒍𝒆𝒏𝒕 𝑴𝒐𝒅𝒆" : "🫆 𝑺𝒊𝒍𝒆𝒏𝒕 𝑴𝒐𝒅𝒆";
+        const modeText = userSilentMode[userId] ? "🔇 𝑺𝒊𝒍𝒆𝒏𝒕 𝑴𝒐𝒅𝒆" : "🫆 တိတ်ဆိတ်မှု မုဒ်";
         const statusText = userSilentMode[userId] ? 
           "(𝑺𝒊𝒍𝒆𝒏𝒕 𝑴𝒐𝒅𝒆)\n\n🎄အနိုင်အရှုံး notification မပေးတော့ပါ\n📊 Profit update တွေကို auto-edit လုပ်ပါမယ်" :
           "(𝑺𝒊𝒍𝒆𝒏𝒕𝑴𝒐𝒅𝒆 𝑶𝒇𝒇)\n\n🎄အနိုင်အရှုံး notification ပေးပါတယ်";
@@ -3715,12 +3712,12 @@ bot.on('message', async (msg) => {
         
       }
       // 🔐 Re-Login button
-      else if (rawText.trim() === "🔐 𝑹𝒆-𝑳𝒐𝒈𝒊𝒏") {
+      else if (rawText.trim() === "🔐 အကောင့် ပြန်ဝင်မယ်") {
         delete userSessions[userId];
         delete userTemp[userId]?.platform;
         delete userSettings[userId]?.platform;
         await sendMessageWithRetry(chatId, 
-          `🔐 𝑹𝒆-𝑳𝒐𝒈𝒊𝒏\n\n𝑺𝒆𝒔𝒔𝒊𝒐𝒏 𝒄𝒍𝒆𝒂𝒓𝒆𝒅. 𝑷𝒍𝒆𝒂𝒔𝒆 𝒔𝒆𝒍𝒆𝒄𝒕 𝒚𝒐𝒖𝒓 𝒑𝒍𝒂𝒕𝒇𝒐𝒓𝒎 𝒂𝒈𝒂𝒊𝒏.`,
+          `🔐 အကောင့် ပြန်ဝင်မယ်\n\n𝑺𝒆𝒔𝒔𝒊𝒐𝒏 𝒄𝒍𝒆𝒂𝒓𝒆𝒅. 𝑷𝒍𝒆𝒂𝒔𝒆 𝒔𝒆𝒍𝒆𝒄𝒕 𝒚𝒐𝒖𝒓 𝒑𝒍𝒂𝒕𝒇𝒐𝒓𝒎 𝒂𝒈𝒂𝒊𝒏.`,
           makePlatformKeyboard()
         );
         
@@ -3731,8 +3728,8 @@ bot.on('message', async (msg) => {
         
       }
       // 🎲 Game Type button (from Bet Place Settings)
-      else if (rawText.trim() === "🎲 𝑮𝒂𝒎𝒆 𝑻𝒚𝒑𝒆") {
-        await sendMessageWithRetry(chatId, "🎮 𝑪𝒉𝒐𝒐𝒔𝒆 𝑮𝒂𝒎𝒆 𝑻𝒚𝒑𝒆:", makeGameTypeKeyboard());
+      else if (rawText.trim() === "🎲 ဂိမ်းအခန်းရွေးရန်") {
+        await sendMessageWithRetry(chatId, "🎮 ကစားခြင်းသောအခန်းကို ရွေးပါ:", makeGameTypeKeyboard());
         
       }
       // 🔙 Back to Auto Bet button
@@ -3741,19 +3738,19 @@ bot.on('message', async (msg) => {
         
       }
       // 🧧 Profit Target button (from Risk Control)
-      else if (rawText.trim() === "🧧 𝑷𝒓𝒐𝒇𝒊𝒕 𝑻𝒂𝒓𝒈𝒆𝒕") {
+      else if (rawText.trim() === "🧧 အမြတ်သတ်မှန်ချက်") {
         userState[userId] = { state: "INPUT_PROFIT_TARGET" };
         await sendMessageWithRetry(chatId, 
-          `🎯 𝑺𝒆𝒕 𝑷𝒓𝒐𝒇𝒊𝒕 𝑻𝒂𝒓𝒈𝒆𝒕\n\n𝑬𝒏𝒕𝒆𝒓 𝒕𝒂𝒓𝒈𝒆𝒕 𝒑𝒓𝒐𝒇𝒊𝒕 𝒂𝒎𝒐𝒖𝒏𝒕 𝒊𝒏 Ks:\n\n5000\n\n💡 𝑩𝒐𝒕 𝒘𝒊𝒍𝒍 𝒔𝒕𝒐𝒑 𝒂𝒖𝒕𝒐𝒎𝒂𝒕𝒊𝒄𝒂𝒍𝒍𝒚 𝒘𝒉𝒆𝒏 𝒕𝒂𝒓𝒈𝒆𝒕 𝒊𝒔 𝒓𝒆𝒂𝒄𝒉𝒆𝒅`,
+          `🎯 🧧 အမြတ်သတ်မှန်ချက်\n\nသတ်မှတ်ထားသော အနိုင်ရငွေ ကိုထည့်ပါ:\n\n10000\n\n💡 🧧 အမြတ်သတ်မှန်ချက် သို့ရောက်ပါက Bot Auto ရပ်သွားပါလိမ့်မယ်`,
           makeRiskControlKeyboard()
         );
         
       }
       // 🌡️ Stop Lose Limit button (from Risk Control)
-      else if (rawText.trim() === "🌡️ 𝑺𝒕𝒐𝒑 𝑳𝒐𝒔𝒆 𝑳𝒊𝒎𝒊𝒕") {
+      else if (rawText.trim() === "🌡️သတ်မှတ်ငွေ ရှုံးလျှင် ရပ်") {
         userState[userId] = { state: "INPUT_STOP_LIMIT" };
         await sendMessageWithRetry(chatId, 
-          `🌡️ 𝑺𝒆𝒕 𝑺𝒕𝒐𝒑 𝑳𝒐𝒔𝒔 𝑨𝒎𝒐𝒖𝒏𝒕\n\n𝑬𝒏𝒕𝒆𝒓 𝒎𝒂𝒙𝒊𝒎𝒖𝒎 𝒍𝒐𝒔𝒔 𝒂𝒎𝒐𝒖𝒏𝒕 𝒊𝒏 Ks:\n\n𝑬𝒙𝒂𝒎𝒑𝒍𝒆: 5000\n\n🧩 𝑩𝒐𝒕 𝒘𝒊𝒍𝒍 𝒔𝒕𝒐𝒑 𝒂𝒖𝒕𝒐𝒎𝒂𝒕𝒊𝒄𝒂𝒍𝒍𝒚 𝒘𝒉𝒆𝒏 𝒕𝒉𝒊𝒔 𝒍𝒐𝒔𝒔 𝒊𝒔 𝒓𝒆𝒂𝒄𝒉𝒆𝒅`,
+          `🌡️သတ်မှတ်ထားသော ရှုံးငွေပမာဏတွင်  \n\nBot Auto ရပ်သွားရန် ပမာဏ ထည့်ပါ :\n\nဥပမာ: 5000\n\n🧩 𝑩𝒐𝒕 𝒘𝒊𝒍𝒍 𝒔𝒕𝒐𝒑 𝒂𝒖𝒕𝒐𝒎𝒂𝒕𝒊𝒄𝒂𝒍𝒍𝒚 𝒘𝒉𝒆𝒏 𝒕𝒉𝒊𝒔 𝒍𝒐𝒔𝒔 𝒊𝒔 𝒓𝒆𝒂𝒄𝒉𝒆𝒅`,
           makeRiskControlKeyboard()
         );
         
@@ -3769,7 +3766,7 @@ bot.on('message', async (msg) => {
         
       }
       // 📚 Strategy button (from Risk Control)
-      else if (rawText.trim() === "📚 𝑺𝒕𝒓𝒂𝒕𝒆𝒈𝒚") {
+      else if (rawText.trim() === "📚 နည်းဗျူဟာ") {
         await sendMessageWithRetry(chatId, "📚 𝑪𝒉𝒐𝒐𝒔𝒆 𝑺𝒕𝒓𝒂𝒕𝒆𝒈𝒚:", makeRiskControlStrategyKeyboard());
         
       }
@@ -3825,23 +3822,23 @@ bot.on('message', async (msg) => {
       // Game Type selection buttons
       else if (rawText.trim() === "🎮 𝑻𝑹𝑿") {
         userSettings[userId].game_type = "TRX";
-        await sendMessageWithRetry(chatId, `🎄𝑮𝒂𝒎𝒆 𝑻𝒚𝒑𝒆 𝒔𝒆𝒕 𝒕𝒐: 𝑻𝑹𝑿`, makeBetPlaceSettingsKeyboard());
+        await sendMessageWithRetry(chatId, `🎄ရွေးချယ်ထားသော အခန်း: 𝑻𝑹𝑿`, makeBetPlaceSettingsKeyboard());
         
       } else if (rawText.trim() === "⚡ 𝑾𝑰𝑵𝑮𝑶𝟑𝟎𝑺") {
         userSettings[userId].game_type = "WINGO30S";
-        await sendMessageWithRetry(chatId, `🎄𝑮𝒂𝒎𝒆 𝑻𝒚𝒑𝒆 𝒔𝒆𝒕 𝒕𝒐: 𝑾𝑰𝑵𝑮𝑶𝟑𝟎𝑺`, makeBetPlaceSettingsKeyboard());
+        await sendMessageWithRetry(chatId, `🎄ရွေးချယ်ထားသော အခန်း: 𝑾𝑰𝑵𝑮𝑶𝟑𝟎𝑺`, makeBetPlaceSettingsKeyboard());
         
       } else if (rawText.trim() === "⏰ 𝑾𝑰𝑵𝑮𝑶𝟏𝑴𝑰𝑵") {
         userSettings[userId].game_type = "WINGO1MIN";
-        await sendMessageWithRetry(chatId, `🎄𝑮𝒂𝒎𝒆 𝑻𝒚𝒑𝒆 𝒔𝒆𝒕 𝒕𝒐: 𝑾𝑰𝑵𝑮𝑶𝟏𝑴𝑰𝑵`, makeBetPlaceSettingsKeyboard());
+        await sendMessageWithRetry(chatId, `🎄ရွေးချယ်ထားသော အခန်း: 𝑾𝑰𝑵𝑮𝑶𝟏𝑴𝑰𝑵`, makeBetPlaceSettingsKeyboard());
         
       } else if (rawText.trim() === "🕒 𝑾𝑰𝑵𝑮𝑶𝟑𝑴𝑰𝑵") {
         userSettings[userId].game_type = "WINGO3MIN";
-        await sendMessageWithRetry(chatId, `🎄𝑮𝒂𝒎𝒆 𝑻𝒚𝒑𝒆 𝒔𝒆𝒕 𝒕𝒐: 𝑾𝑰𝑵𝑮𝑶𝟑𝑴𝑰𝑵`, makeBetPlaceSettingsKeyboard());
+        await sendMessageWithRetry(chatId, `🎄ရွေးချယ်ထားသော အခန်း: 𝑾𝑰𝑵𝑮𝑶𝟑𝑴𝑰𝑵`, makeBetPlaceSettingsKeyboard());
         
       } else if (rawText.trim() === "⌛ 𝑾𝑰𝑵𝑮𝑶𝟓𝑴𝑰𝑵") {
         userSettings[userId].game_type = "WINGO5MIN";
-        await sendMessageWithRetry(chatId, `🎄𝑮𝒂𝒎𝒆 𝑻𝒚𝒑𝒆 𝒔𝒆𝒕 𝒕𝒐: 𝑾𝑰𝑵𝑮𝑶𝟓𝑴𝑰𝑵`, makeBetPlaceSettingsKeyboard());
+        await sendMessageWithRetry(chatId, `🎄ရွေးချယ်ထားသော အခန်း: 𝑾𝑰𝑵𝑮𝑶𝟓𝑴𝑰𝑵`, makeBetPlaceSettingsKeyboard());
         
       }
       // 🔙 Back to Bet Settings button
@@ -3850,17 +3847,17 @@ bot.on('message', async (msg) => {
         
       }
       // 🔋 Activate button
-      else if (rawText.trim() === "🔋 𝑨𝒄𝒕𝒊𝒗𝒂𝒕𝒆") {
+      else if (rawText.trim() === "🔋 စတင်ကစားမယ်") {
         log('INFO', `🔋 Activate command for user ${userId}, settings: ${JSON.stringify(settings)}`);
         
         if (!settings.bet_sizes || settings.bet_sizes.length === 0) {
           await sendMessageWithRetry(chatId,
-            `🧨 𝑬𝑹𝑹𝑶𝑹: 𝑩𝒆𝒕 𝑾𝒓𝒂𝒈𝒆𝒓 𝒏𝒐𝒕 𝑪𝒐𝒏𝒇𝒊𝒈𝒖𝒓𝒆𝒅!\n\n` +
-            `🎋 𝑷𝒍𝒆𝒂𝒔𝒆 𝒔𝒆𝒕 𝒚𝒐𝒖𝒓 𝒃𝒆𝒕 𝒘𝒓𝒂𝒈𝒆𝒓 𝒇𝒊𝒓𝒔𝒕!\n\n` +
-            `⚙️ 𝑮𝒐 𝒕𝒐 "𝑩𝒆𝒕_𝑾𝒓𝒂𝒈𝒆𝒓" 𝒃𝒖𝒕𝒕𝒐𝒏\n` +
-            `📝 𝑬𝒏𝒕𝒆𝒓 𝒂𝒎𝒐𝒖𝒏𝒕𝒔 (𝒐𝒏𝒆 𝒑𝒆𝒓 𝒍𝒊𝒏𝒆):\n` +
+            `🧨 သတိ: လောင်းကြေး မသတ်မှတ်ရသေးပါ!\n\n` +
+            `🎋 ကျေးဇူးပြု၍ လောင်းကြေးသတ်မှတ်ပေးပါ!\n\n` +
+            `⚙️ 𝑮𝒐 𝒕𝒐 "လောင်းကြေး သတ်မှတ်ရန် ကိုနှိပ်ပါ" \n` +
+            `📝 လောင်းလိုသော ပမာဏ ပို့ပါ (တစ်ကြိမ်သာ ပို့ပါ):\n` +
             `100\n300\n700\n1500\n\n` +
-            `🚫 𝑩𝒐𝒕 𝒄𝒂𝒏𝒏𝒐𝒕 𝒔𝒕𝒂𝒓𝒕 𝒘𝒊𝒕𝒉𝒐𝒖𝒕 𝒃𝒆𝒕 𝒘𝒓𝒂𝒈𝒆𝒓!`,
+            `🚫 𝑩𝒐𝒕 အား လောင်းကြေး မသတ်မှတ်ပဲ ကစား၍ မရနိုင်ပါ!`,
             makeMainKeyboard(true, userId)
           );
           return;
@@ -3868,11 +3865,11 @@ bot.on('message', async (msg) => {
         
         if (!settings.strategy) {
           await sendMessageWithRetry(chatId,
-            `🧨 𝑬𝑹𝑹𝑶𝑹: 𝑺𝒕𝒓𝒂𝒕𝒆𝒈𝒚 𝑵𝒐𝒕 𝑺𝒆𝒍𝒆𝒄𝒕𝒆𝒅!\n\n` +
-            `📚 𝑷𝒍𝒆𝒂𝒔𝒆 𝒔𝒆𝒍𝒆𝒄𝒕 𝒂 𝒔𝒕𝒓𝒂𝒕𝒆𝒈𝒚 𝒇𝒊𝒓𝒔𝒕!\n\n` +
-            `⚙️ 𝑮𝒐 𝒕𝒐 "𝑹𝒊𝒔𝒌 𝑪𝒐𝒏𝒕𝒓𝒐𝒍" → "𝑺𝒕𝒓𝒂𝒕𝒆𝒈𝒚" 𝒃𝒖𝒕𝒕𝒐𝒏\n` +
+            `🧨 သတိ: နည်းဗျူဟာ မသတ်မှတ်ရသေးပါ!\n\n` +
+            `📚 ကျေးဇူးပြု၍ နည်းဗျူဟာ ထဲမှ ရွေးချယ်ပါ!\n\n` +
+            `⚙️ 𝑮𝒐 𝒕𝒐 "အန္တရာယ်ထိန်းချုပ်မှု" → "နည်းဗျူဟာ" 𝒃𝒖𝒕𝒕𝒐𝒏\n` +
             `🎯 𝑪𝒉𝒐𝒐𝒔𝒆 𝒇𝒓𝒐𝒎 𝒂𝒗𝒂𝒊𝒍𝒂𝒃𝒍𝒆 𝒔𝒕𝒓𝒂𝒕𝒆𝒈𝒊𝒆𝒔\n\n` +
-            `🚫 𝑩𝒐𝒕 𝒄𝒂𝒏𝒏𝒐𝒕 𝒔𝒕𝒂𝒓𝒕 𝒘𝒊𝒕𝒉𝒐𝒖𝒕 𝒂 𝒔𝒕𝒓𝒂𝒕𝒆𝒈𝒚!`,
+            `🚫 𝑩𝒐𝒕 အား နည်းဗျူဟာ မရွေးပဲ စကား၍ မရပါ !`,
             makeMainKeyboard(true, userId)
           );
           return;
@@ -3888,7 +3885,7 @@ bot.on('message', async (msg) => {
         
         if (settings.running) {
           await sendMessageWithRetry(chatId, 
-            `⚠️ 𝑩𝒐𝒕 𝑨𝒍𝒓𝒆𝒂𝒅𝒚 𝑹𝒖𝒏𝒏𝒊𝒏𝒈\n\n𝑻𝒉𝒆 𝒃𝒐𝒕 𝒊𝒔 𝒂𝒍𝒓𝒆𝒂𝒅𝒚 𝒂𝒄𝒕𝒊𝒗𝒆.\n\n⏹️ 𝑺𝒕𝒐𝒑 𝒕𝒉𝒆 𝒃𝒐𝒕 𝒇𝒊𝒓𝒔𝒕 𝒕𝒐 𝒄𝒉𝒂𝒏𝒈𝒆 𝒔𝒆𝒕𝒕𝒊𝒏𝒈𝒔`,
+            `⚠️ 𝑩𝒐𝒕 အား စတင်ကစားနေသည်\n\nBot အလုပ်လုပ်နေပါပြီ.\n\n⏹️ ဘော့တ်ကို ဦးစွာပြောင်းလဲရန် ဆက်တင်ကို ရပ်ပါ။`,
             makeMainKeyboard(true, userId)
           );
           return;
@@ -3917,12 +3914,12 @@ bot.on('message', async (msg) => {
         // Start betting worker
         settings.task = bettingWorker(userId, chatId);
         
-      } else if (rawText.trim() === "🪫 𝑫𝒆𝒂𝒄𝒕𝒊𝒗𝒂𝒕𝒆") {
+      } else if (rawText.trim() === "🪫 ကစာတာ ရပ်မယ်") {
         const settings = userSettings[userId] || {};
         
         if (!settings.running) {
           await sendMessageWithRetry(chatId, 
-            `⚠️ 𝑩𝒐𝒕 𝑵𝒐𝒕 𝑹𝒖𝒏𝒏𝒊𝒏𝒈\n\n𝑻𝒉𝒆 𝒃𝒐𝒕 𝒊𝒔 𝒄𝒖𝒓𝒓𝒆𝒏𝒕𝒍𝒚 𝒔𝒕𝒐𝒑𝒑𝒆𝒅.\n\n🚀 𝑼𝒔𝒆 𝑺𝒕𝒂𝒓𝒕 𝒕𝒐 𝒃𝒆𝒈𝒊𝒏`,
+            `⚠️သင်သည် Botအား Bot အား ရပ်တန့်ထားပါတယ်\n\n🚀 စတင်ကစားမယ် ကိုနှိပ်၍ ကစားနိုင်သည်\n\nပြဿနာတခုခုဖြစ်ပါက Owner @kiki20251 အား ဆက်သွယ်ပါ`,
             makeMainKeyboard(true, userId)
           );
           return;
@@ -4036,7 +4033,7 @@ const init = async () => {
     console.log(`💰 𝑩𝒂𝒍𝒂𝒏𝒄𝒆 𝑹𝒆𝒕𝒓𝒊𝒆𝒔: ${MAX_BALANCE_RETRIES}`);
     console.log(`⏱️ 𝑩𝒂𝒍𝒂𝒏𝒄𝒆 𝑻𝒊𝒎𝒆𝒐𝒖𝒕: ${BALANCE_API_TIMEOUT}ms`);
     console.log('👑 𝑨𝒅𝒎𝒊𝒏 𝑰𝑫:', ADMIN_ID);
-    console.log('📞 𝑨𝒅𝒎𝒊𝒏: @kiki29251');
+    console.log('📞 𝑨𝒅𝒎𝒊𝒏: @kiki20251');
     console.log('🚀 𝑺𝒕𝒂𝒕𝒖𝒔: စတင်လုပ်ဆောင်နေပါသည်');
     console.log('='.repeat(60) + '\n');
     
