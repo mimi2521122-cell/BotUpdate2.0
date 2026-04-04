@@ -1,0 +1,14 @@
+{
+  "name": "ai-autobet",
+  "version": "1.0.0",
+  "main": "ai_autobet.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node ai_autobet.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "canvas": "^2.11.2",
+    "telegraf": "^4.16.3"
+  }
+}
