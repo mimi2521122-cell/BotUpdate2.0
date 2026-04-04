@@ -1,21 +1,24 @@
-name: Run Telegram Bot
+name: Run Bot
 
 on:
+  push:
   workflow_dispatch:
-  schedule:
-    - cron: "0 */5 * * *"
 
 jobs:
-  run-bot:
+  run:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout Repo
+        uses: actions/checkout@v4
 
-      - name: Install Node
-        uses: actions/setup-node@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
 
-      - run: npm install
-      - run: node kikibots1.0.js
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Start Bot
+        run: npm start
