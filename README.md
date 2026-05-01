@@ -1,7 +1,10 @@
-# AI AutoBet Bot
+# Kiki Auto Bet Bot
 
-## Install
-npm install
+## Setup
+1. `npm install` ကို နှိပ်ပြီး လိုအပ်တာတွေ သွင်းပါ။
+2. `node kikibot.js` နဲ့ Run ပါ။
 
-## Run
-npm start
+## Features
+- Multi-platform support
+- Auto betting system
+- Telegram management
