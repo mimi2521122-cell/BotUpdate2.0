@@ -1,14 +1,20 @@
 {
-  "name": "ai-autobet",
+  "name": "kikibot",
   "version": "1.0.0",
-  "main": "ai_autobet.js",
-  "type": "commonjs",
+  "description": "Multi-platform Auto Bet Bot",
+  "main": "kikibot.js",
   "scripts": {
-    "start": "node ai_autobet.js"
+    "start": "node kikibot.js"
   },
   "dependencies": {
+    "node-telegram-bot-api": "^0.66.0",
     "axios": "^1.6.0",
-    "canvas": "^2.11.2",
-    "telegraf": "^4.16.3"
+    "crypto": "^1.0.1",
+    "fs": "0.0.1-security",
+    "https": "^1.0.0",
+    "timers": "^0.1.1"
+  },
+  "engines": {
+    "node": ">=16.x"
   }
 }
